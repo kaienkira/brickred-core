@@ -5,6 +5,7 @@ SRCS = \
 src/brickred/base_logger.cc \
 src/brickred/command_line_option.cc \
 src/brickred/dynamic_buffer.cc \
+src/brickred/string_util.cc \
 
 LINK_TYPE = static
 INCLUDE = -Isrc
