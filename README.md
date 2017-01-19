@@ -1,2 +1,3 @@
-# brickred-core
+brickred-core
+=============
 brickred c++ core library
