@@ -33,7 +33,7 @@ public:
     bool peekInt8(uint64_t &v, size_t offset = 0);
     bool peekInt16(uint16_t &v, size_t offset = 0, bool littleEndian = false);
     bool peekInt16(uint32_t &v, size_t offset = 0, bool littleEndian = false);
-    bool peekInt16(uint64_t &v, size_t offset = 0, bool littelEndian = false);
+    bool peekInt16(uint64_t &v, size_t offset = 0, bool littleEndian = false);
     bool peekInt32(uint32_t &v, size_t offset = 0, bool littleEndian = false);
     bool peekInt32(uint64_t &v, size_t offset = 0, bool littleEndian = false);
     bool peekInt64(uint64_t &v, size_t offset = 0, bool littleEndian = false);
