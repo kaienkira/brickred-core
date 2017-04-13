@@ -293,7 +293,7 @@ bool DynamicBuffer::readInt8(uint64_t &v)
 
 bool DynamicBuffer::readInt16(uint16_t &v, bool littleEndian)
 {
-    if (peekInt16(v, littleEndian) == false) {
+    if (peekInt16(v, 0, littleEndian) == false) {
         return false;
     }
     read(2);
@@ -303,7 +303,7 @@ bool DynamicBuffer::readInt16(uint16_t &v, bool littleEndian)
 
 bool DynamicBuffer::readInt16(uint32_t &v, bool littleEndian)
 {
-    if (peekInt16(v, littleEndian) == false) {
+    if (peekInt16(v, 0, littleEndian) == false) {
         return false;
     }
     read(2);
@@ -313,7 +313,7 @@ bool DynamicBuffer::readInt16(uint32_t &v, bool littleEndian)
 
 bool DynamicBuffer::readInt16(uint64_t &v, bool littleEndian)
 {
-    if (peekInt16(v, littleEndian) == false) {
+    if (peekInt16(v, 0, littleEndian) == false) {
         return false;
     }
     read(2);
@@ -323,7 +323,7 @@ bool DynamicBuffer::readInt16(uint64_t &v, bool littleEndian)
 
 bool DynamicBuffer::readInt32(uint32_t &v, bool littleEndian)
 {
-    if (peekInt32(v, littleEndian) == false) {
+    if (peekInt32(v, 0, littleEndian) == false) {
         return false;
     }
     read(4);
@@ -333,7 +333,7 @@ bool DynamicBuffer::readInt32(uint32_t &v, bool littleEndian)
 
 bool DynamicBuffer::readInt32(uint64_t &v, bool littleEndian)
 {
-    if (peekInt32(v, littleEndian) == false) {
+    if (peekInt32(v, 0, littleEndian) == false) {
         return false;
     }
     read(4);
@@ -343,7 +343,7 @@ bool DynamicBuffer::readInt32(uint64_t &v, bool littleEndian)
 
 bool DynamicBuffer::readInt64(uint64_t &v, bool littleEndian)
 {
-    if (peekInt64(v, littleEndian) == false) {
+    if (peekInt64(v, 0, littleEndian) == false) {
         return false;
     }
     read(8);
