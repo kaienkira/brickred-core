@@ -102,7 +102,7 @@ std::string toUpper(const std::string &str)
 std::string toLower(const std::string &str)
 {
     std::string lower(str);
-    std::transform(lower.begin(), lower.end(), lower.begin(), ::toupper);
+    std::transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
 
     return lower;
 }
