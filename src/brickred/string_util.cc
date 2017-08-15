@@ -11,7 +11,7 @@ namespace string_util {
 void split(const char *str, const char *sep,
            std::vector<std::string> *result, int max_split)
 {
-    size_t sep_len = strlen(sep);
+    size_t sep_len = ::strlen(sep);
     if (0 == sep_len) {
         return;
     }
@@ -39,7 +39,7 @@ void split(const char *str, const char *sep,
 void split(const char *str, size_t str_len, const char *sep,
            std::vector<std::string> *result, int max_split)
 {
-    size_t sep_len = strlen(sep);
+    size_t sep_len = ::strlen(sep);
     if (0 == sep_len) {
         return;
     }
@@ -180,7 +180,7 @@ std::string toString(unsigned long long ull)
 
 const char *find(const char *str, size_t str_len, const char *keyword)
 {
-    size_t keyword_len = strlen(keyword);
+    size_t keyword_len = ::strlen(keyword);
     if (0 == keyword_len) {
         return NULL;
     }
