@@ -423,4 +423,24 @@ void DynamicBuffer::writeInt64(uint64_t v, bool littleEndian)
     write(8);
 }
 
+size_t DynamicBuffer::readBytes(char *buffer, size_t count)
+{
+    size_t real_count = std::min(count, readableBytes());
+    ::memcpy(buffer, readBegin(), real_count);
+    read_index_ += real_count;
+
+    if (read_index_ == write_index_) {
+        clear();
+    }
+
+    return real_count;
+}
+
+void DynamicBuffer::writeBytes(const char *buffer, size_t count)
+{
+    reserveWritableBytes(count);
+    ::memcpy(writeBegin(), buffer, count);
+    write_index_ += count;
+}
+
 } // namespace brickred

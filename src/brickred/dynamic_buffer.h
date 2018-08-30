@@ -51,6 +51,8 @@ public:
     void writeInt16(uint16_t v, bool littleEndian = false);
     void writeInt32(uint32_t v, bool littleEndian = false);
     void writeInt64(uint64_t v, bool littleEndian = false);
+    size_t readBytes(char *buffer, size_t count);
+    void writeBytes(const char *buffer, size_t count);
 
 private:
     std::vector<char> buffer_;
