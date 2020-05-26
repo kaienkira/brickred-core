@@ -9,7 +9,7 @@ usage()
     exit 1
 }
 
-opt_prefix='/usr/local'
+brickred_install_prefix='/usr/local'
 
 options=`getopt -o h -l \
 help,\
@@ -22,9 +22,9 @@ while [ $# -gt 0 ]
 do
     case "$1" in
     -h|--help) usage;;
-    --prefix) opt_prefix=$2; shift;;
+    --prefix) brickred_install_prefix=$2; shift;;
     --enable-baselog)
-        core_cpp_flag=$core_cpp_flag' -DBRICKRED_BUILD_ENABLE_BASE_LOG'
+        brickred_compile_flag=$brickred_compile_flag' -DBRICKRED_BUILD_ENABLE_BASE_LOG'
         ;;
     --) shift; break;;
     *) usage;;
@@ -49,5 +49,6 @@ then
 fi
 
 # output
-echo "BR_INSTALL_PREFIX = $opt_prefix" >config.mak
-echo "BR_CORE_CPP_FLAG = $core_cpp_flag" >>config.mak
+echo "BRICKRED_INSTALL_PREFIX = $brickred_install_prefix" >config.mak
+echo "BRICKRED_COMPILE_FLAG = $brickred_compile_flag" >>config.mak
+echo "BRICKRED_LINK_FLAG =" >>config.mak
