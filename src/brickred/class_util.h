@@ -3,7 +3,9 @@
 
 #define BRICKRED_NONCOPYABLE(_T)        \
     _T(const _T &) = delete;            \
+    _T(_T &&) = delete;                 \
     _T &operator=(const _T &) = delete; \
+    _T &operator=(_T &&) = delete;      \
 
 #define BRICKRED_SINGLETON(_T)          \
 public:                                 \
@@ -17,7 +19,9 @@ private:                                \
     _T();                               \
     ~_T();                              \
     _T(const _T &) = delete;            \
+    _T(_T &&) = delete;                 \
     _T &operator=(const _T &) = delete; \
+    _T &operator=(_T &&) = delete;      \
 
 #define BRICKRED_PRECREATED_SINGLETON(_T)      \
 public:                                        \
@@ -36,8 +40,9 @@ private:                                       \
     _T();                                      \
     ~_T();                                     \
     _T(const _T &) = delete;                   \
+    _T(_T &&) = delete;                        \
     _T &operator=(const _T &) = delete;        \
-
+    _T &operator=(_T &&) = delete;             \
 
 #define BRICKRED_PRECREATED_SINGLETON_IMPL(_T) \
     _T::ObjectCreator _T::oc;                  \
@@ -47,6 +52,5 @@ private:                                      \
     typedef void (_T::*SafeBoolType)() const; \
     void SafeBoolTypeNotNull() const {}       \
 public:                                       \
-
 
 #endif
