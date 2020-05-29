@@ -1,8 +1,8 @@
 #ifndef BRICKRED_DYNAMIC_BUFFER_H
 #define BRICKRED_DYNAMIC_BUFFER_H
 
-#include <stdint.h>
 #include <cstddef>
+#include <cstdint>
 #include <vector>
 
 namespace brickred {
