@@ -30,10 +30,9 @@ public:
         return (*func_)(obj_, p...);
     }
 
-    BRICKRED_SAFE_BOOL_TYPE(Function)
-    operator SafeBoolType() const
+    explicit operator bool() const
     {
-        return func_ != 0 ? &Function::SafeBoolTypeNotNull : 0;
+        return func_ != 0;
     }
 
 private:

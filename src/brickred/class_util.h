@@ -47,10 +47,4 @@ private:                                       \
 #define BRICKRED_PRECREATED_SINGLETON_IMPL(_T) \
     _T::ObjectCreator _T::oc;                  \
 
-#define BRICKRED_SAFE_BOOL_TYPE(_T)           \
-private:                                      \
-    typedef void (_T::*SafeBoolType)() const; \
-    void SafeBoolTypeNotNull() const {}       \
-public:                                       \
-
 #endif
