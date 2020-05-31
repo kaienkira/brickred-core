@@ -21,11 +21,7 @@ public:
         };
     };
 
-    typedef void (*LogFunc)(
-        int level,
-        const char *format,
-        va_list args
-    );
+    using LogFunc = void (*)(int level, const char *format, va_list args);
 
     void setLogFunc(LogFunc log_func);
     void log(int level, const char *format, ...);

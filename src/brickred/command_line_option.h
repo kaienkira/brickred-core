@@ -16,10 +16,10 @@ public:
         };
     };
 
-    typedef std::vector<std::string> ArgumentVector;
-    typedef std::vector<std::string> ParameterVector;
-    typedef std::map<std::string, ParameterType::type> OptionParameterTypeMap;
-    typedef std::map<std::string, ParameterVector> OptionParametersMap;
+    using ArgumentVector = std::vector<std::string>;
+    using ParameterVector = std::vector<std::string>;
+    using OptionParameterTypeMap = std::map<std::string, ParameterType::type>;
+    using OptionParametersMap = std::map<std::string, ParameterVector>;
 
     CommandLineOption();
     ~CommandLineOption();

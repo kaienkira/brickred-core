@@ -36,7 +36,8 @@ public:
     }
 
 private:
-    typedef R (*FunctionType)(const void *, P...);
+    using FunctionType = R (*)(const void *, P...);
+
     Function(FunctionType func, const void *obj) :
         func_(func), obj_(obj) {}
 
