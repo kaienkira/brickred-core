@@ -25,7 +25,7 @@ void split(const char *str, const char *sep,
         }
 
         const char *next = ::strstr(last, sep);
-        if (NULL == next) {
+        if (nullptr == next) {
             result->push_back(std::string(last));
             break;
         }
@@ -182,13 +182,13 @@ const char *find(const char *str, size_t str_len, const char *keyword)
 {
     size_t keyword_len = ::strlen(keyword);
     if (0 == keyword_len) {
-        return NULL;
+        return nullptr;
     }
 
     const char *ret = std::search(str, str + str_len,
                                   keyword, keyword + keyword_len);
     if (ret == str + str_len) {
-        return NULL;
+        return nullptr;
     } else {
         return ret;
     }
